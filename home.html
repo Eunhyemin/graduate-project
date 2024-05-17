@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+  <title>Saving the Youth</title>
+  <style>
+    body{
+      background-color:aliceblue;
+    }
+    .nav{
+      height: 70px;
+      border-bottom: 1px solid black;
+      display: flex;
+      align-items: center;
+    }
+    .nav-right-items{
+      display: flex;
+      margin-left: auto;
+    }
+    .nav-item{
+      margin-left: 10px;
+    }
+    .company-name{
+      margin-left: 20px;
+    }
+    .title{
+      text-align: center;
+      font-size: 3.5rem;
+      font-weight: 300;
+    }
+    .subtitle{
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: 300;
+    }
+    .main{
+      width: 800px;
+      margin: 0 auto;
+      margin-top: 60px;
+    }
+    .saving-item{
+      display: flex;
+    }
+    .item{
+      width: 300px;
+      height: 300px;
+      border: 1px solid black;
+      margin: 20px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .item-title{
+      font-size: 1.5 rem;
+      background: rgba(0,0,0,.03);
+      height: 53px;
+      line-height: 53px;
+      border-bottom: 1px solid black;
+    }
+    .item-detail{
+      font-size: 1.5rem;
+      font-weight: bold;
+      padding: 20px;
+    }
+    .poetsen-one-regular {
+      font-family: "Poetsen One", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+    }
+    .gamja-flower-regular {
+          font-family: "Gamja Flower", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+  </style>
+  <link rel="stylesheet" href="button.css">
+</head>
+<body>
+  <div class="nav poetsen-one-regular">
+    <div class="company-name">
+      Saving the Youth
+    </div>
+    <div class="nav-right-items">
+      <input type="submit" value="소개">
+      <input type="submit" value="마이 페이지">
+      <input type="submit" value="로그인">
+    </div>
+  </div>
+<div class="main">
+  <div class="title gamja-flower-regular">
+    Saving the Youth 저축상품추천
+  </div>
+  <div class="subtitle">
+    사용자의 선택 정보에 맞춰 저축 상품을 추천합니다.
+  </div>
+  <div class="saving-item">
+    <div class="item">
+      <div class="item-title">
+        적금
+      </div>
+      <div class="item-detail">
+        원하는 조건에 해당 적금 추천
+      </div>
+      <button class="button">
+        Click
+      </button>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        예금
+      </div>
+      <div class="item-detail">
+        원하는 조건에 해당 예금 추천
+      </div>
+      <button class="button">
+        Click
+      </button>
+    </div>
+    <div class="item">
+      <div class="item-title">
+        주택청약
+      </div>
+      <div class="item-detail">
+        원하는 조건에 해당 주택청약 추천
+      </div>
+      <button class="button">
+        Click
+      </button>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>

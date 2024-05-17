@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/header :: header" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    <title>Saving the Youth</title>
+    <style>
+        body{
+          background-color:aliceblue;
+        }
+        .nav{
+          height: 70px;
+          border-bottom: 1px solid black;
+          display: flex;
+          align-items: center;
+        }
+        .nav-right-items{
+          display: flex;
+          margin-left: auto;
+        }
+        .company-name{
+          margin-left: 20px;
+        }
+        .title{
+          text-align: center;
+          font-size: 3.5rem;
+          font-weight: 300;
+        }
+        .subtitle{
+          text-align: center;
+          font-size: 1.25rem;
+          font-weight: 300;
+        }
+        .main{
+          width: 800px;
+          margin: 0 auto;
+          margin-top: 60px;
+        }
+        .tb{
+          width: 400px;
+          height: 100px;
+          border: 2px solid black;
+          margin: 10px;
+          border-radius: 4px;
+          text-align: center;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .form-group{
+          text-align: center ;
+          font-size: 2rem;
+          font-weight: 300;
+        }
+        .button{
+          display: flex;
+          align-items: center;
+          display: inline-block;
+        }
+        .poetsen-one-regular {
+        font-family: "Poetsen One", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+        .gamja-flower-regular {
+          font-family: "Gamja Flower", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+        }
+    </style>
+    <link rel="stylesheet" href="button.css">
+</head>
+<body>
+<div class="nav poetsen-one-regular">
+    <div class="company-name">
+        Saving the Youth
+    </div>
+    <div class="nav-right-items">
+        <input type="submit" value="소개">
+        <input type="submit" value="마이 페이지">
+        <input type="submit" value="로그인">
+    </div>
+</div>
+<div class="main">
+    <div class="title gamja-flower-regular">
+        Saving the Youth 로그인
+    </div>
+    <div class="subtitle">
+      로그인 바랍니다.
+    </div>
+    <div th:replace="fragments/bodyHeader :: bodyHeader"/>
+    <form role="form" action="/members/new" th:object="${memberForm}" method="post">
+      <div class="form-group tb">
+            <div>
+            <label th:for="login_id">아이디</label>
+            <input
+                    type="text" th:field="*{login_id}" class="form-control"
+                    placeholder="아이디를 입력하세요">
+            </div>
+            <div>
+            <label th:for="password">비밀번호</label>
+            <input
+                    type="text" th:field="*{password}" class="form-control"
+                    placeholder="비밀번호를 입력하세요">
+            </div>
+        </div>
+    </form>
+    <div style=" text-align: center;">
+      <button type="submit" class="button" style=" display: inline-block;" onclick="location.href='home.html'">로그인</button>
+      <button type="submit" class="button" style=" display: inline-block;" onclick="location.href='site.html'">회원가입</button>
+    </div>
+    <div th:replace="fragments/footer :: footer" />
+</div>
+</body>
+</html>
